@@ -1,0 +1,23 @@
+{% extends 'index.html'%}
+{% load static %}
+
+{% block title %}
+    QUARTOS
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="card" style="width: 18rem;">
+            {% for item in dados_quarto %}
+                <img src="{{ item.foto_quarto.url }}" class="card-img-top" alt="Logo">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.tipo}}</h5>
+                    <p class="card-text">{{ item.descricao }}</p>
+                    <p class="card-text">Disponibilidade: {{ item.disponibilidade }}</p>
+                    <a href="#" class="btn" style="background-color: #FF0000; color: #fff;">Reservar</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock %}
