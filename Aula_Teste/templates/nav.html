@@ -1,18 +1,18 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #FF0000 ;">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-      {% for item in dados_hotel %}   
-          <img style="width: 100px;" src="{{item.logo.url}}" alt="Logo">
-      {% endfor %}
+    {% for item in dados_hotel %}   
+      <img src="{{ item.logo.url }}" alt="Logo">
+    {% endfor %}
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a style="color: #fff;" class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a style="color: #fff;" class="nav-link" href="quartos">Quartos</a>
+          <a class="nav-link" href="quartos">Quartos</a>
         </li>
         <li class="nav-item">
-          <a style="color: #fff;" class="nav-link" href="reserva">Reservar</a>
+          <a class="nav-link" href="reserva">Reservar</a>
         </li>
       </ul>
     </div>

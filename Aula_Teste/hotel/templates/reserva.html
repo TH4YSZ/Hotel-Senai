@@ -1,17 +1,16 @@
-{% extends 'index.html'%}
+{% extends 'index.html' %}
+{% load static %}
 
 {% block title %}
     RESERVAR QUARTO
 {% endblock %}
 
 {% block body %}
-    <main style="height: 100vh; display: flex; justify-content: center; align-items: center;">
-        <div style="text-align: center;">
-
-                <!-- action é uma rota -->
+    <main style="height: 100vh; display: flex; justify-content: center; align-items: center; margin: 5rem auto;" >
+        <div class="form-container">
+            <h3>Reservar Quarto</h3>
             <form action="reserva" method="post">
-                <!-- segurança para o site -->
-                {% csrf_token %} 
+                {% csrf_token %}
                 <div>
                     <label for="id_nome">Nome:</label><br>
                     {{ form.nome }}
@@ -43,7 +42,5 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-
     </main>
-    
 {% endblock %}
