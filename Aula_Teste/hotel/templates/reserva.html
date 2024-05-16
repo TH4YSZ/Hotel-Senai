@@ -1,0 +1,49 @@
+{% extends 'index.html'%}
+
+{% block title %}
+    RESERVAR QUARTO
+{% endblock %}
+
+{% block body %}
+    <main style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <div style="text-align: center;">
+
+                <!-- action é uma rota -->
+            <form action="reserva" method="post">
+                <!-- segurança para o site -->
+                {% csrf_token %} 
+                <div>
+                    <label for="id_nome">Nome:</label><br>
+                    {{ form.nome }}
+                </div>
+                <div>
+                    <label for="id_sobrenome">Sobrenome:</label><br>
+                    {{ form.sobrenome }}
+                </div>
+                <div>
+                    <label for="id_email">Email:</label><br>
+                    {{ form.email }}
+                </div>
+                <div>
+                    <label for="id_idade">Idade:</label><br>
+                    {{ form.idade }}
+                </div>
+                <div>
+                    <label for="id_end">Endereço:</label><br>
+                    {{ form.end }}
+                </div>
+                <div>
+                    <label for="id_quarto">Tipo de Quarto:</label><br>
+                    {{ form.quarto }}
+                </div>
+                <div>
+                    <label for="id_data">Data:</label><br>
+                    {{ form.data }}
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </main>
+    
+{% endblock %}
