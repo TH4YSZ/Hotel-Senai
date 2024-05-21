@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+    CADASTRO
+{% endblock %}
+
+{% block body %}
+    <main style="height: 100vh; display: flex; justify-content: center; align-items: center; margin: 5rem auto;" >
+        <div class="form-container">
+            <h3>Cadastro</h3>
+            <form action="cadastro" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="id_first_name">Nome:</label><br>
+                    {{ form.first_name }}
+                </div>
+                <div>
+                    <label for="id_last_name">Sobrenome:</label><br>
+                    {{ form.last_name }}
+                </div>
+                <div>
+                    <label for="id_user">Usuário</label><br>
+                    {{ form.user }}
+                </div>
+                <div>
+                    <label for="id_email">Email:</label><br>
+                    {{ form.email }}
+                </div>
+                <div>
+                    <label for="id_password">Senha:</label><br>
+                    {{ form.password }}
+                </div><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+{% endblock %}
