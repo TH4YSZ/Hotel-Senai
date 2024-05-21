@@ -63,7 +63,7 @@
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #ddd !important; /* Alterne esta cor conforme necessário para o efeito de foco e hover */
+    color: #ddd !important; 
 }
 
 /* homepage.html */
