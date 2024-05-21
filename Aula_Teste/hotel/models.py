@@ -34,4 +34,4 @@ class Reserva(models.Model):
     idade = models.CharField(max_length=3)
     end = models.CharField(max_length=100)
     quarto = models.CharField(max_length=15, choices=TIPOS_QUARTOS)
-    data = models.CharField(max_length=100)
+    data = models.CharField(max_length=10)

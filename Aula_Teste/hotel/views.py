@@ -44,7 +44,8 @@ def reserva(request):
                 user = Reserva(nome=var_nome, sobrenome=var_sobrenome, email=var_email, idade=var_idade, end=var_end, quarto=var_quarto, data=var_data)
                 # Armazena a informação no banco
                 user.save()
-
+            else:
+                return redirect("reserva")
         # GET
         else:
             form = FormReserva()
@@ -70,7 +71,8 @@ def cadastro(request):
             user.save()
 
             return redirect("login")
-
+        else:
+            return redirect("cadastro")
 
     else:
         form = FormCadastro()
@@ -90,7 +92,7 @@ def login(request):
             user = authenticate(username=var_user, password=var_password)
 
             if user is not None:
-                return redirect("reserva")
+                return redirect("quartos")
             else:
                 return redirect("login")
 

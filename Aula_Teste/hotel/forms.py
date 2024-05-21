@@ -14,7 +14,7 @@ class FormReserva(forms.Form):
     idade = forms.CharField(label="Idade", max_length=3)
     end = forms.CharField(label="Endereço", max_length=100)
     quarto = forms.ChoiceField(label="Tipo de Quarto", choices=TIPOS_QUARTOS)
-    data = forms.CharField(label="Data", max_length=8)
+    data = forms.DateField(label='Data', widget=forms.DateInput(attrs={'type': 'date'}))
 
 class FormCadastro(forms.Form):
     first_name = forms.CharField(label="Nome", max_length=20)
