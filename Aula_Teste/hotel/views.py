@@ -44,6 +44,8 @@ def reserva(request):
                 user = Reserva(nome=var_nome, sobrenome=var_sobrenome, email=var_email, idade=var_idade, end=var_end, quarto=var_quarto, data=var_data)
                 # Armazena a informação no banco
                 user.save()
+
+                return redirect("quartos")
             else:
                 return redirect("reserva")
         # GET
